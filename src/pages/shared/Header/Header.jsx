@@ -18,12 +18,12 @@ const Header = () => {
         <button className="btn bg-[#D72050] rounded px-6 font-medium text-xl text-white">
           Latest
         </button>
-        <p className="font-semibold text-[#403F3F]">
+        <div className="font-semibold text-[#403F3F]">
           <Marquee>
             Match Highlights: Germany vs Spain — as it happened ! Match
             Highlights: Germany vs Spain as...
           </Marquee>
-        </p>
+        </div>
       </div>
     </div>
   );
