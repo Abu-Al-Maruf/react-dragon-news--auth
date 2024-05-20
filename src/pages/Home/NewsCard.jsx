@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { MdRemoveRedEye } from "react-icons/md";
 import StarRatings from "react-star-ratings";
 const NewsCard = ({ singleNews }) => {
-  const { title, image_url, details, author, rating, total_view } = singleNews;
+  const { _id, title, image_url, details, author, rating, total_view } = singleNews;
 
   return (
     <div className="border">
@@ -13,7 +13,7 @@ const NewsCard = ({ singleNews }) => {
         <div className="flex justify-center gap-3">
           <img className="w-10 h-10 rounded-full" src={author?.img} alt="" />
           <h3 className="flex flex-col items-start justify-center text-#403F3F] font-semibold">
-            {author.name}{" "}
+            {author.name}
             <span className="text-[#706F6F] font-normal">
               {author.published_date}
             </span>
@@ -37,8 +37,10 @@ const NewsCard = ({ singleNews }) => {
           {details.length > 200 ? (
             <p>
               {details.slice(0, 200)}
-              <Link className="text-[#FF8C47] font-semibold">
-                {" "}
+              <Link
+                to={`/newsDetails/${_id}`}
+                className="text-[#FF8C47] font-semibold"
+              >
                 Read More...
               </Link>
             </p>
