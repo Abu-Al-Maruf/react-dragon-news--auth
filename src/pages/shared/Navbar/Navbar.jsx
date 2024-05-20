@@ -81,7 +81,7 @@ const Navbar = () => {
         {user ? (
           <Link
             onClick={handleLogOut}
-            to={"/login"}
+            to={"/"}
             className="flex btn bg-[#403F3F] text-xl font-medium rounded px-10 text-white"
           >
             Log Out
